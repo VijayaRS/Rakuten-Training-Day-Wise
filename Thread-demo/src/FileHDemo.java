@@ -1,4 +1,4 @@
-//to make resuable for fifferent files.
+//to make resuable for different files.
 
 import java.io.BufferedReader;
 import java.io.File;
