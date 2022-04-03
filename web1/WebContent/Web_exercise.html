@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My First Web Page</title>
+</head>
+<body>
+<u>User Form</u>
+<br /><br />
+<label for="firstname">Name</label>
+<input id="firstname"> <br /><br />
+<label for="ageinp">Age:: </label>
+<input type="number" id="ageinp"> <br /><br />
+
+<label for="email">Email:</label>
+ <input type="email" id="email" name="email"><br /><br />
+  
+<input type="radio" name="gender" id="femaleradio" value="Female"/>
+<label for="femaleradio">Female</label>
+<input type="radio" name="gender" id="maleradio" value="Male"/>
+<label for="maleradio">Male</label><br />
+
+<hr />
+ <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> I have a boat</label><br> 
+<hr />
+ <label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select> 
+<hr />
+
+<h3><u>Lists</u></h3>
+<h4>Unordered List - </h4>
+ <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<h4>Ordered List - </h4>
+ <ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<h4>Description List - </h4>
+ <dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl> 
+
+<hr />
+
+<h3><u>HTML Color Box</u></h3>
+  <label for="favcolor">Select a color:</label>
+  <input type="color" id="favcolor" name="favcolor">
+<hr />
+
+<h3><u>Date</u></h3>
+  <label for="birthday">Enter a date:</label>
+  <input type="date" id="birthday" name="birthday">
+
+  <label for="birthdaytime">Date and Time: [use datetime-local]</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime"> 
+<hr />
+
+<h3><u>File Selector</u></h3>
+  <label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">
+<hr />
+
+<h3><u>Range</u></h3>
+  <label for="vol">Volume (between 0 and 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50">
+<hr />
+
+<h5>HTML Forms</h5>
+
+<p >We generally use a form "action" attribute to redirect to a php file for processing, but the same can be achieved using a JS function by using a "onsubmit" attribute.</p>
+<br /><br />
+
+<form onsubmit="display()">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fnameform" name="fname" value="Aaa"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lnameform" name="lname" value="Bbb"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<hr />
+<br /> <button onclick="save()">Save</button>
+</body>
+<script type="text/javascript" src="app2.js"></script>
+</html>
