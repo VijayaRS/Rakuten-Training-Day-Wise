@@ -12,6 +12,14 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	Integer id;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	String name;
 	int age;
 

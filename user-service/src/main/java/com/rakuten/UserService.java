@@ -13,10 +13,11 @@ public class UserService {
 	UserRepository repository;
 	
 	
-	void save(User user) {
+	 Integer save(User user) {
 		repository.save(user);
 		
 		System.out.println("save method called");
+		return user.getId();
 	}
 	public List<User> getAllUsers() {
 		
