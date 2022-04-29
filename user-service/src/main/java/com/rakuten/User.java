@@ -5,13 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class User {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Integer id;
+	
+	@NotBlank
+	String name;
+	
+	@Min(value=1,message="age cannot be less than 1 yr")
+	@Max(value=100,message="age cant be greater than 100")
+	int age;
 	public Integer getId() {
 		return id;
 	}
@@ -19,9 +29,6 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	String name;
-	int age;
 
 	public int getAge() {
 		return age;
@@ -38,7 +45,4 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
-
 }
